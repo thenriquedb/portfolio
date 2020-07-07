@@ -5,16 +5,17 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: 140px;
+  padding-bottom: 60px;
 
   .content {
     @include boundaries;
     display: flex;
     flex-wrap: wrap;
-    padding: 30px;
 
     .message-container {
-      width: 40%;
       margin-right: 30px;
+      width: 40%;
+      padding: 30px;
 
       h1 {
         color: $color-primary;
@@ -37,6 +38,7 @@ footer {
     .form {
       display: flex;
       flex: 1;
+      padding: 30px;
 
       form {
         color: #fff;
@@ -98,8 +100,16 @@ footer {
     }
   }
 
+  @media (max-width: 320px) {
+    .content .form {
+      // padding: 0 20px;
+      padding: 0px !important;
+    }
+  }
+
   @media (max-width: 768px) {
     background-position-y: 300px;
+
     .content .message-container {
       width: 100%;
       margin: 0;

@@ -1,4 +1,6 @@
 #list-of-works {
+  @include boundaries;
+
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -12,14 +14,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 25px 0px;
+    padding: 25px;
 
     div {
       background: #fff;
       border-radius: 50%;
       height: 180px;
       width: 180px;
-
       display: flex;
       justify-content: center;
       align-items: center;
@@ -32,7 +33,6 @@
 
     h1 {
       font-size: 24px;
-      // font-size: 1.87rem;
       font-weight: bold;
       margin-top: 14px;
     }
