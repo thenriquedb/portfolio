@@ -1,0 +1,70 @@
+.projects-container {
+  @include boundaries;
+  padding: 30px;
+
+  .title {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  .title-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 25px;
+
+    .project {
+      color: #fff;
+
+      h1 {
+        color: $color-primary;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+
+      p {
+        text-align: justify;
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 181.19%;
+        margin-top: 20px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+
+      .tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        padding: 0 20px;
+
+        margin: 12px 10px 5px 0;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        border: 1px solid #fff;
+        border-radius: 10px;
+      }
+    }
+  }
+}

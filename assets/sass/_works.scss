@@ -1,0 +1,46 @@
+#list-of-works {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  max-width: 1024px;
+  margin: 0 auto;
+  color: #fff;
+
+  .work-card {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0px;
+
+    div {
+      background: #fff;
+      border-radius: 50%;
+      height: 180px;
+      width: 180px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 120px;
+        width: 120px;
+      }
+    }
+
+    h1 {
+      font-size: 24px;
+      // font-size: 1.87rem;
+      font-weight: bold;
+      margin-top: 14px;
+    }
+
+    p {
+      margin-top: 14px;
+      font-weight: 300;
+      line-height: 25px;
+    }
+  }
+}

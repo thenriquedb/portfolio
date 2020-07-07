@@ -1,0 +1,40 @@
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  // height: 100vh;
+
+  h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 4em;
+
+    span {
+      color: $color-primary;
+      font-weight: bold;
+    }
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.3em;
+    margin-top: 5px;
+  }
+
+  @media (max-width: 425px) {
+    padding: 0 25px;
+
+    h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1em;
+    }
+  }
+}

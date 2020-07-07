@@ -1,0 +1,34 @@
+$color-primary: #fe2889;
+$bg-color: #0e0c31;
+$secundary: #090821;
+$black: #141414;
+$grey: #5e5e5e;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body,
+html {
+  font-family: Roboto, sans-serif;
+  background: $bg-color;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+button {
+  font-family: Roboto, sans-serif;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  background-color: $color-primary;
+  font-weight: bold;
+  border-radius: 8px;
+}
