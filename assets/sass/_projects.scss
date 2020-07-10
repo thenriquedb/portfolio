@@ -123,6 +123,8 @@ $banners: "../images/projects/ferro-aco-logo-white.png",
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    .projects {
+      grid-template-columns: repeat(1, minmax(200px, 1fr));
+    }
   }
 }

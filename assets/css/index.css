@@ -405,7 +405,7 @@ button:hover {
   }
 }
 @media (max-width: 768px) {
-  .projects-container {
+  .projects-container .projects {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
 }
