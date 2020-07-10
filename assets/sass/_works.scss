@@ -1,10 +1,15 @@
 #list-of-works {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  max-width: 1024px;
-  margin: 0 auto;
-  color: #fff;
+  @include section-title;
+  @include boundaries;
+  padding: 30px;
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+  }
 
   .work-card {
     display: flex;
@@ -12,7 +17,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 25px 0px;
+    padding: 30px 10px;
 
     div {
       background: #fff;

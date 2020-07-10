@@ -5,6 +5,7 @@
     <title>Thiago Domingues</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
@@ -12,55 +13,42 @@
     <div class="welcome-container">
       <h1>olá, sou <span>Thiago Domingues</span></h1>
       <h2>freelancer & desenvolvedor fullstack</h2>
+
+      <a href="#Quem sou eu?">
+        <img src="assets/images/icons/keyboard_arrow_down-24px.svg" />
+      </a>
     </div>
 
-    <div id="list-of-works">
-      <div class="work-card">
-        <div>
-          <img src="assets/images/icons/web.svg" alt="web" />
-        </div>
-
-        <h1>WEB</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-
-      <div class="work-card">
-        <div>
-          <img src="assets/images/icons/phone.svg" alt="web" />
-        </div>
-
-        <h1>MOBILE</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-
-      <div class="work-card">
-        <div>
-          <img src="assets/images/icons/database.svg" alt="web" />
-        </div>
-
-        <h1>BACKEND</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </div>
-
-    <div class="about-container">
+    <div id="Quem sou eu?" class="about-container">
       <div class="avatar-wrapper">
         <div class="avatar"></div>
 
         <div class="contacts">
-          <a class="contact" href="#">
+          <a
+            class="contact"
+            target="_blank"
+            href="https://www.linkedin.com/in/thenriquedomingues/"
+          >
             <img src="assets/images/icons/linkedin.svg" alt="Linkedin" />
           </a>
 
-          <a class="contact" href="#">
+          <a
+            class="contact"
+            target="_blank"
+            href="https://github.com/thenriquedb"
+          >
             <img src="assets/images/icons/github.svg" alt="Github" />
           </a>
 
-          <a class="contact" href="#">
+          <a
+            class="contact"
+            target="_blank"
+            href="mailto:thenrique2012@gmail.com"
+          >
             <img src="assets/images/icons/email.svg" alt="Email" />
           </a>
 
-          <a class="contact" href="#">
+          <a class="contact" target="_blank" href="https://t.me/thenrique">
             <img src="assets/images/icons/telegram.svg " alt="Telegram" />
           </a>
         </div>
@@ -119,6 +107,46 @@
       </div>
     </div>
 
+    <div id="list-of-works">
+      <div class="title">
+        <img
+          src="assets/images/icons/antenna.svg"
+          class="title-icon"
+          alt="rocket"
+        />
+        Serviços
+      </div>
+
+      <div class="cards">
+        <div class="work-card">
+          <div>
+            <img src="assets/images/icons/web.svg" alt="web" />
+          </div>
+
+          <h1>WEB</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="work-card">
+          <div>
+            <img src="assets/images/icons/phone.svg" alt="web" />
+          </div>
+
+          <h1>MOBILE</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+
+        <div class="work-card">
+          <div>
+            <img src="assets/images/icons/database.svg" alt="web" />
+          </div>
+
+          <h1>BACKEND</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="projects-container">
       <div class="title">
         <img
@@ -131,10 +159,15 @@
 
       <div class="projects">
         <div class="project">
-          <img
-            src="assets/images/projects/ferro-aco-banner.jpg"
-            alt="Projeto"
-          />
+          <div class="image-wrapper">
+            <img
+              src="assets/images/projects/ferro-aco-banner.jpg"
+              alt="Projeto"
+            />
+
+            <div class="overlay-1"></div>
+          </div>
+
           <h1>Ferro e Aço Goiatuba</h1>
 
           <div class="tags">
@@ -148,10 +181,18 @@
             lorem pulvinar mattis. Praesent facilisis euismod purus, at pulvinar
             tortor lobortis laoreet.
           </p>
+          <a>Download em breve</a>
         </div>
 
         <div class="project">
-          <img src="assets/images/projects/sinergia-banner.jpg" alt="Projeto" />
+          <div class="image-wrapper">
+            <img
+              src="assets/images/projects/sinergia-banner.jpg"
+              alt="Projeto"
+            />
+            <div class="overlay-2"></div>
+          </div>
+
           <h1>Sinergia</h1>
 
           <div class="tags">
@@ -159,10 +200,47 @@
           </div>
 
           <p>
-            Cras sollicitudin non mi sed lacinia. Donec scelerisque neque quis
-            lorem pulvinar mattis. Praesent facilisis euismod purus, at pulvinar
-            tortor lobortis laoreet.
+            Projeto de extensão voluntário no qual participaram outros dois
+            alunos do curso de Engenharia Elétrica. Fui responsável por
+            idealizar e desenvolver um aplicativo mobile utilizando React Native
+            juntamente com as bibliotecas Styled Components e Redux. O
+            aplicativo tem como propósito a realização do cálculo do consumo
+            elétrico de uma residência com base na tarifa convencional e na
+            tarifa branca.
           </p>
+
+          <a>Download em breve</a>
+        </div>
+
+        <div class="project">
+          <div class="image-wrapper">
+            <img
+              src="assets/images/projects/my-daily-status-banner.jpg"
+              alt="Projeto"
+            />
+            <div class="overlay-3"></div>
+          </div>
+          <h1>My Daily Status</h1>
+
+          <div class="tags">
+            <div class="tag">Next JS</div>
+            <div class="tag">Firebase</div>
+            <div class="tag">0Auth</div>
+            <div class="tag">Google Maps API</div>
+          </div>
+
+          <p>
+            Projeto desenvolvido durante o workshop online Fullstack Lab. My
+            Daily Status é uma aplicação web no qual permite a visualização de
+            outros usuários que podem estar com Covid-19 em um determinado raio
+            em volta de sua localização, isso é feito de forma anônima.
+            Desenvolvido o framework NextJS que permite renderizar o código
+            React no servidor. Para a autenticação de usuário utilizei o Auth0 e
+            todas as informações são armazenadas no Cloud FirestorE. Database. E
+            por fim
+          </p>
+
+          <a target="_blank" href="https://my-dayly-status.now.sh/">Acessar</a>
         </div>
       </div>
     </div>
@@ -208,7 +286,7 @@
               placeholder="Mensagem"
               id="message"
               name="message"
-              rows="5"
+              rows="8"
               cols="30"
             ></textarea>
             <button type="submit">Enviar</button>
@@ -216,5 +294,7 @@
         </div>
       </div>
     </footer>
+
+    <script type="text/javascript" src="scripts.js"></script>
   </body>
 </html>

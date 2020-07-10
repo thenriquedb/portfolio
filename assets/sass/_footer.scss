@@ -78,6 +78,7 @@ footer {
 
       input,
       textarea {
+        color: #fff;
         background: $black;
         border: 1px solid $grey;
         border-radius: 8px;
@@ -93,14 +94,20 @@ footer {
         padding: 0 10px;
       }
 
+      input,
+      textarea {
+        &:focus {
+          border-color: $color-primary;
+        }
+      }
+
       button {
-        background-color: $color-primary;
         height: 40px;
       }
     }
   }
 
-  @media (max-width: 325px) {
+  @media (max-width: 400px) {
     .content .form {
       padding: 0;
     }

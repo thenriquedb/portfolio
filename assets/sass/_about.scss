@@ -38,6 +38,8 @@
       margin: 25px;
 
       img {
+        @include hover-animation;
+
         height: 45px;
         width: 45px;
       }
@@ -57,9 +59,12 @@
       grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
 
       .skill {
+        @include hover-animation;
+
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 10px;
 
         img {
           height: 75px;

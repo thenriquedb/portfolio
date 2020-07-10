@@ -1,6 +1,6 @@
 $color-primary: #fe2889;
-$bg-color: #0e0c31;
-$secundary: #090821;
+$bg-color: #090821;
+$secundary: #0e0c31;
 $black: #141414;
 $grey: #5e5e5e;
 
@@ -31,4 +31,13 @@ button {
   background-color: $color-primary;
   font-weight: bold;
   border-radius: 8px;
+  transition: 0.3s;
+
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+
+  &:hover {
+    transform: scale(1.02);
+    background-color: darken($color-primary, 10%);
+    // box-shadow: 0px 0px 15px 1px $color-primary;
+  }
 }
