@@ -17,7 +17,8 @@
     color: #fff;
     font-weight: 400;
     font-size: 4em;
-
+    animation: fadein 1s;
+    // animation-delay: 0.12;
     span {
       color: $color-primary;
       font-weight: bold;
@@ -30,6 +31,11 @@
     color: #fff;
     letter-spacing: 0.3em;
     margin-top: 5px;
+
+    &::after {
+      content: "|";
+      animation: blink 0.9s infinite;
+    }
   }
 
   a {
@@ -56,6 +62,15 @@
     }
   }
 
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   @keyframes float {
     0% {
       transform: translateY(0px);
@@ -65,6 +80,17 @@
     }
     100% {
       transform: translateY(0px);
+    }
+  }
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
     }
   }
 }

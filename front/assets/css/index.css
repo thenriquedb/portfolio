@@ -52,6 +52,7 @@ button:hover {
   color: #fff;
   font-weight: 400;
   font-size: 4em;
+  animation: fadein 1s;
 }
 .welcome-container h1 span {
   color: #fe2889;
@@ -63,6 +64,10 @@ button:hover {
   color: #fff;
   letter-spacing: 0.3em;
   margin-top: 5px;
+}
+.welcome-container h2::after {
+  content: "|";
+  animation: blink 0.9s infinite;
 }
 .welcome-container a {
   position: absolute;
@@ -85,6 +90,14 @@ button:hover {
     font-size: 1em;
   }
 }
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -94,6 +107,14 @@ button:hover {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 }
 
@@ -229,6 +250,11 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
+}
+#list-of-works .work-card div:hover {
+  transform: translateY(-8px);
+  transform: scale(1.08);
 }
 #list-of-works .work-card div img {
   height: 120px;
@@ -271,6 +297,9 @@ button:hover {
   grid-gap: 25px;
 }
 .projects-container .projects .project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: #fff;
 }
 .projects-container .projects .project h1 {
@@ -309,7 +338,7 @@ button:hover {
 .projects-container .projects .project .image-wrapper img {
   height: 100%;
   width: inherit;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
   margin-bottom: 20px;
 }
 .projects-container .projects .project .overlay-1 {
@@ -394,14 +423,11 @@ button:hover {
   background: #fe2889;
 }
 @keyframes float {
-  0% {
+  0%, 100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0px);
+    transform: translateY(-8px);
   }
 }
 @media (max-width: 768px) {
@@ -456,11 +482,11 @@ footer .content .form form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 50px 30px;
-  height: 450px;
+  padding: 30px 30px;
+  height: 500px;
   right: 0;
   background-color: #0e0c31;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 footer .content .form .has-layout-wrapper label,
 footer .content .form .has-layout-wrapper p {

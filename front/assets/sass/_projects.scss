@@ -14,6 +14,9 @@ $banners: "../images/projects/ferro-aco-logo-white.png",
     grid-gap: 25px;
 
     .project {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       color: #fff;
 
       h1 {
@@ -56,7 +59,7 @@ $banners: "../images/projects/ferro-aco-logo-white.png",
         img {
           height: 100%;
           width: inherit;
-          border-radius: 10px 10px 0 0;
+          border-radius: 10px;
           margin-bottom: 20px;
         }
       }
@@ -109,15 +112,12 @@ $banners: "../images/projects/ferro-aco-logo-white.png",
     }
 
     @keyframes float {
-      0% {
+      0%,
+      100% {
         transform: translateY(0px);
       }
       50% {
-        transform: translateY(-5px);
-      }
-
-      100% {
-        transform: translateY(0px);
+        transform: translateY(-8px);
       }
     }
   }
