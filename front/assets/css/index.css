@@ -459,8 +459,8 @@ footer .content .message-container {
 }
 footer .content .message-container h1 {
   color: #fe2889;
-  font-size: 1.75rem;
-  line-height: 2.5rem;
+  font-size: 2.2rem;
+  line-height: 3.5rem;
   margin-bottom: 30px;
 }
 footer .content .message-container p {
@@ -526,6 +526,11 @@ footer .content .form textarea:focus {
 }
 footer .content .form button {
   height: 40px;
+}
+footer .content .form strong {
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
 }
 @media (max-width: 400px) {
   footer .content .form {

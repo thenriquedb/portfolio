@@ -8,7 +8,7 @@ function typeWritter(element) {
   const textArr = content.split("");
 
   textArr.forEach((letter, index) =>
-    setTimeout(() => (element.innerHTML += letter), 80 * index)
+    setTimeout(() => (element.innerHTML += letter), 75 * index)
   );
 }
 const message = document.querySelector(".welcome-container h2");
@@ -94,13 +94,24 @@ form.addEventListener("submit", handleFormSubmit);
 function handleFormSubmit(event) {
   event.preventDefault();
 
-  console.log(event.target);
-
   const name = event.target.name.value;
   const email = event.target.email.value;
   const message = event.target.message.value;
   const hasLayout = document.querySelector("input[name='has-layout']:checked")
     .value;
 
-  console.log("values", name, email, message, hasLayout);
+  const body = { name, email, hasLayout, message };
+
+  const config = {
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: JSON.stringify(body),
+  };
+
+  fetch("http://localhost:3333/send", config)
+    .then((res) => res.json())
+    .then((json) => console.log(json));
 }
