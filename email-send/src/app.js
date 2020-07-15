@@ -41,4 +41,8 @@ async function sendEmail(req, res) {
 
 app.post("/send", sendEmail);
 
-app.listen(3333);
+app.get("/", (req, res) => {
+  return res.send("Hello World");
+});
+
+app.listen(3000);
