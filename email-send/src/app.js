@@ -10,8 +10,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-console.log("process.env.EMAIL_USER", process.env.EMAIL_USER);
-console.log("process.env.EMAIL_PASS", process.env.EMAIL_PASS);
 const transporter = nodemailer.createTransport({
   service: "Hotmail",
   auth: {
