@@ -57,13 +57,21 @@
       <div class="description-wrapper">
         <h1>Quem sou eu?</h1>
         <p>
-          Estudante ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua.
+          Desenvolvedor Fullstack Javascript utilizando o que as tecnologias
+          mais modernas no mercado de desenvolvimento atual:
+          <strong>Node.js</strong>, <strong>ReactJS</strong> e
+          <strong>React Native</strong>. Atualmente estou cursando o 5º período
+          do curso Ciência da Computação no IFMG Campus Formiga.
         </p>
+
+        <p>
+          Além das habilidades em desenvolvimento, possuo também certo
+          conhecimento em design de interface, isso faz com que eu consiga atuar
+          em todas as etapas do desenvolvimento, indo desde a prototipação da
+          interface, desenvolvimento e a publicação.
+        </p>
+
+        <p></p>
 
         <h1>Habilidades</h1>
         <div class="skills">
@@ -103,7 +111,14 @@
           </div>
         </div>
 
-        <button>Download Cúrriculo</button>
+        <a
+          target="_blank"
+          href="https://drive.google.com/file/d/1cio0sAoJG_SujFalyciuCbG-EE13vYIf/view?usp=sharing"
+        >
+          <button type="button">
+            Download Cúrriculo
+          </button>
+        </a>
       </div>
     </div>
 
@@ -124,7 +139,9 @@
           </div>
 
           <h1>WEB</h1>
-          <p>Desenvolvimento de sistemas e sites</p>
+          <p>
+            Desenvolvimento de sistemas e sites intuitivos e responsivos
+          </p>
         </div>
 
         <div class="work-card">
@@ -176,15 +193,15 @@
             <div class="tags">
               <div class="tag">React Native</div>
               <div class="tag">React JS</div>
-              <div class="tag">Redux</div>
               <div class="tag">Firebase</div>
             </div>
 
             <p>
-              Aplicativo desenvolvido com objetivo de auxiliar os clientes da
-              Ferro e Aço Goiatuba a realizarem seus orçamentos. Juntamente com
-              o aplicativo também foi criado um painel de controle para
-              gerenciamento.
+              Aplicativo desenvolvido para a loja Ferro e Aço Goiatuba no qual
+              os clientes podem realizar seus orçamentos pelo aplicativo e
+              enviar diretamente para o Whatsapp da empresa. Além do aplicativo
+              mobile, também foi desenvolvido um painel administrativo para web
+              para o o controle do aplicativo.
             </p>
           </div>
 
@@ -245,12 +262,22 @@
             <p>
               Projeto desenvolvido durante o workshop online Fullstack Lab. My
               Daily Status é uma aplicação web no qual permite a visualização de
-              outros usuários que podem estar com Covid-19 em um determinado
-              raio em volta de sua localização, isso é feito de forma anônima.
+              outros usuários cadastrados que podem estar com Covid-19 em um
+              determinado raio em volta de sua localização utilizando o Google
+              Maps. Para preservar a privacidade, este processo é realizado de
+              forma totalmente anônima.
             </p>
           </div>
 
-          <a target="_blank" href="https://my-dayly-status.now.sh/">Acessar</a>
+          <div class="links">
+            <a target="_blank" href="https://my-dayly-status.now.sh/">
+              Acessar
+            </a>
+
+            <a target="_blank" href="https://my-dayly-status.now.sh/">
+              Repositório
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -259,40 +286,47 @@
       <div class="content">
         <div class="message-container">
           <h1>
-            E ai, está esperando o que para tirar essa sua ideia do papel?
+            Vamos trocar uma ideia!
           </h1>
+
+          <p>
+            O que você está esperando para mostrar o seu projeto ao mundo?
+          </p>
         </div>
 
         <div class="form">
           <form id="contact-form">
-            <input type="text" name="name" placeholder="Nome" />
-            <input type="email" name="email" placeholder="Email" />
+            <label for="name">Nome</label>
+            <input type="text" name="name" placeholder="Nome" required />
 
-            <div class="has-layout-wrapper">
-              <p>Possui layout?</p>
-              <div class="options">
-                <input type="radio" name="has-layout" value="true" />
-                <label for="has-layout-true">Sim</label>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Email" required />
 
-                <input type="radio" name="has-layout" value="false" checked />
-                <label for="has-layout-false">Não</label>
-              </div>
-            </div>
+            <label for="service">Serviço</label>
+            <select name="service">
+              <option value="site">Site</option>
+              <option value="app">Aplicativo</option>
+              <option value="backend">Backend</option>
+              <option value="fullstack">Aplicação completa</option>
+            </select>
 
+            <label for="message">Mensagem</label>
             <textarea
-              placeholder="Mensagem"
+              required
+              placeholder="Me fala um pouco sobre o seu projeto!"
               name="message"
               rows="8"
               cols="30"
             ></textarea>
-            <button type="submit">Enviar</button>
-            <strong id="sucess-message">
-              Email enviado com sucesso!
-            </strong>
+            <button type="submit" id="submit-button">Enviar</button>
 
-            <strong id="error-message">
+            <div id="success-message">
+              Email enviado com sucesso!
+            </div>
+
+            <div id="error-message">
               Ocorreu um erro ao enviar o email. Tente novamente.
-            </strong>
+            </div>
           </form>
         </div>
       </div>

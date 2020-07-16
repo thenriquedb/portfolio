@@ -1,5 +1,5 @@
 module.exports = (data) => {
-  const { name, email, hasLayout, message } = data;
+  const { name, email, service, message } = data;
   console.log(data);
   return `
     <html>
@@ -9,8 +9,8 @@ module.exports = (data) => {
 
       <strong>Email: </strong> <span>${email}</span> <br> 
 
-      <strong>Possui layout: </strong>
-      <span>${hasLayout ? "Sim" : "Não"}</span> <br>
+      <strong>Serviço: </strong>
+      <span>${service}</span> <br>
       <br>
 
       ${message}

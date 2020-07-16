@@ -47,37 +47,23 @@ footer {
         flex-direction: column;
         justify-content: space-between;
         padding: 30px 30px;
-        height: 500px;
+        // height: 500px;
         right: 0;
         background-color: $secundary;
         border-radius: 20px;
       }
 
-      .has-layout-wrapper {
-        label,
-        p {
-          font-size: 0.85rem;
-        }
+      label {
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+      }
 
-        input[type="radio"] {
-          height: 15px;
-          width: 15px;
-          background: transparent;
-          margin-right: 8px;
-        }
-
-        label {
-          margin-right: 30px;
-        }
-
-        .options {
-          display: flex;
-          align-items: center;
-        }
+      select {
       }
 
       input,
-      textarea {
+      textarea,
+      select {
         color: #fff;
         background: $black;
         border: 1px solid $grey;
@@ -89,13 +75,17 @@ footer {
         resize: none;
       }
 
-      input {
+      input,
+      select {
         height: 45px;
         padding: 0 10px;
       }
 
       input,
-      textarea {
+      textarea,
+      select {
+        margin-bottom: 20px;
+
         &:focus {
           border-color: $color-primary;
         }
@@ -103,12 +93,20 @@ footer {
 
       button {
         height: 40px;
+
+        &:disabled {
+          background-color: darken($color-primary, 20) !important;
+        }
       }
 
-      strong {
-        color: #fff;
-        font-size: 0.8rem;
-        text-align: center;
+      #error-message {
+        @include form-message;
+        background-color: $danger;
+      }
+
+      #success-message {
+        @include form-message;
+        background-color: $success;
       }
     }
   }

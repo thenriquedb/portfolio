@@ -1,17 +1,19 @@
+require("dotenv/config");
+
 const express = require("express");
 const cors = require("cors");
 const generateEmail = require("./generateEmail");
 
-const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
+console.log("process.env.EMAIL_USER", process.env.EMAIL_USER);
+console.log("process.env.EMAIL_PASS", process.env.EMAIL_PASS);
 const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: "465",
+  service: "Hotmail",
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -25,15 +27,15 @@ async function sendEmail(req, res) {
 
   try {
     await transporter.sendMail({
-      from: "thenriquedb@gmail.com",
-      to: "thenrique2012@gmail.com",
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_TO,
       subject: "Contato - Portfólio",
       html,
       replyTo: email,
     });
   } catch (error) {
     console.log(error);
-    return res.json({ message: "Erro ao enviar o email" });
+    return res.status(400).json({ message: "Erro ao enviar o email" });
   }
 
   return res.json({ message: "Email enviado com sucesso!" });
@@ -45,4 +47,4 @@ app.get("/", (req, res) => {
   return res.send("Hello World");
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);

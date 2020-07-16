@@ -94,13 +94,23 @@ form.addEventListener("submit", handleFormSubmit);
 function handleFormSubmit(event) {
   event.preventDefault();
 
+  const submitButton = event.target.querySelector("button");
+  submitButton.disabled = true;
+  submitButton.innerText = "Enviando...";
+
   const name = event.target.name.value;
   const email = event.target.email.value;
   const message = event.target.message.value;
-  const hasLayout = document.querySelector("input[name='has-layout']:checked")
-    .value;
+  const service = event.target.service.value;
 
-  const body = { name, email, hasLayout, message };
+  // Remove previous request status message
+  const successStatusMessage = document.getElementById("success-message");
+  const errorStatusMessage = document.getElementById("error-message");
+
+  successStatusMessage.style.display = "none";
+  errorStatusMessage.style.display = "none";
+
+  const body = { name, email, service, message };
 
   const config = {
     headers: {
@@ -111,7 +121,23 @@ function handleFormSubmit(event) {
     body: JSON.stringify(body),
   };
 
-  fetch("http://localhost:3333/send", config)
+  fetch("https://thiagodomingues-portfolio.herokuapp.com/send", config)
     .then((res) => res.json())
-    .then((json) => console.log(json));
+    .then((json) => {
+      submitButton.disabled = false;
+      submitButton.innerText = "Enviar";
+
+      event.target.name.value = "";
+      event.target.email.value = "";
+      event.target.message.value = "";
+      event.target.service.value = "site";
+
+      successStatusMessage.style.display = "flex";
+    })
+    .catch((err) => {
+      submitButton.disabled = false;
+      submitButton.innerText = "Enviar";
+
+      errorStatusMessage.style.display = "flex";
+    });
 }

@@ -13,6 +13,31 @@ html {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   min-height: 100vh;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+body ::-webkit-scrollbar,
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+body ::-webkit-scrollbar-track,
+html ::-webkit-scrollbar-track {
+  background: #0e0c31;
+}
+body ::-webkit-scrollbar-thumb,
+html ::-webkit-scrollbar-thumb {
+  background: #fe2889;
+}
+body ::-webkit-scrollbar-thumb:hover,
+html ::-webkit-scrollbar-thumb:hover {
+  background: #d80163;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 button {
@@ -26,7 +51,6 @@ button {
   font-weight: bold;
   border-radius: 8px;
   transition: 0.3s;
-  /* offset-x | offset-y | blur-radius | spread-radius | color */
 }
 button:hover {
   transform: scale(1.02);
@@ -126,19 +150,20 @@ button:hover {
   justify-content: center;
   color: #fff;
   padding: 30px;
+  margin-top: 35px;
 }
 .about-container h1 {
   color: #fe2889;
   text-transform: uppercase;
   font-size: 1.5rem;
-  margin: 35px 0 40px 0;
+  margin-bottom: 40px;
 }
 .about-container .avatar-wrapper {
   display: flex;
+  flex: 1;
   width: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   margin-right: 40px;
 }
 .about-container .avatar-wrapper .avatar {
@@ -170,6 +195,7 @@ button:hover {
   font-weight: 300;
   font-size: 1rem;
   line-height: 181.19%;
+  margin-bottom: 20px;
 }
 .about-container .description-wrapper .skills {
   display: grid;
@@ -314,17 +340,22 @@ button:hover {
   line-height: 181.19%;
   margin-top: 20px;
 }
+.projects-container .projects .project .links {
+  display: flex;
+  justify-content: flex-end;
+}
 .projects-container .projects .project a {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   height: 40px;
-  width: 100%;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
   color: #fe2889;
   transition: 0.5s;
+}
+.projects-container .projects .project a:first-of-type {
+  margin-right: 30px;
 }
 .projects-container .projects .project a:hover {
   color: #d80163;
@@ -483,30 +514,17 @@ footer .content .form form {
   flex-direction: column;
   justify-content: space-between;
   padding: 30px 30px;
-  height: 500px;
   right: 0;
   background-color: #0e0c31;
   border-radius: 20px;
 }
-footer .content .form .has-layout-wrapper label,
-footer .content .form .has-layout-wrapper p {
-  font-size: 0.85rem;
-}
-footer .content .form .has-layout-wrapper input[type=radio] {
-  height: 15px;
-  width: 15px;
-  background: transparent;
-  margin-right: 8px;
-}
-footer .content .form .has-layout-wrapper label {
-  margin-right: 30px;
-}
-footer .content .form .has-layout-wrapper .options {
-  display: flex;
-  align-items: center;
+footer .content .form label {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
 }
 footer .content .form input,
-footer .content .form textarea {
+footer .content .form textarea,
+footer .content .form select {
   color: #fff;
   background: #141414;
   border: 1px solid #5e5e5e;
@@ -516,21 +534,52 @@ footer .content .form textarea {
   padding: 10px;
   resize: none;
 }
-footer .content .form input {
+footer .content .form input,
+footer .content .form select {
   height: 45px;
   padding: 0 10px;
 }
+footer .content .form input,
+footer .content .form textarea,
+footer .content .form select {
+  margin-bottom: 20px;
+}
 footer .content .form input:focus,
-footer .content .form textarea:focus {
+footer .content .form textarea:focus,
+footer .content .form select:focus {
   border-color: #fe2889;
 }
 footer .content .form button {
   height: 40px;
 }
-footer .content .form strong {
+footer .content .form button:disabled {
+  background-color: #bf0157 !important;
+}
+footer .content .form #error-message {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 3px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
   color: #fff;
-  font-size: 0.8rem;
   text-align: center;
+  background-color: #c70039;
+}
+footer .content .form #success-message {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 3px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: center;
+  background-color: #22559c;
 }
 @media (max-width: 400px) {
   footer .content .form {

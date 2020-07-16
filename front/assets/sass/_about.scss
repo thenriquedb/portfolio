@@ -5,20 +5,22 @@
   justify-content: center;
   color: #fff;
   padding: 30px;
+  margin-top: 35px;
 
   h1 {
     color: $color-primary;
     text-transform: uppercase;
     font-size: 1.5rem;
-    margin: 35px 0 40px 0;
+    margin-bottom: 40px;
   }
 
   .avatar-wrapper {
     display: flex;
+    flex: 1;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     margin-right: 40px;
 
     .avatar {
@@ -52,6 +54,7 @@
       font-weight: 300;
       font-size: 1rem;
       line-height: 181.19%;
+      margin-bottom: 20px;
     }
 
     .skills {

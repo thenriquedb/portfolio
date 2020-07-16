@@ -3,6 +3,8 @@ $bg-color: #090821;
 $secundary: #0e0c31;
 $black: #141414;
 $grey: #5e5e5e;
+$danger: #c70039;
+$success: #22559c;
 
 * {
   padding: 0;
@@ -19,6 +21,32 @@ html {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   min-height: 100vh;
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $secundary;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $color-primary;
+    // border-radius: 2px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: darken($color-primary, 15);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 button {
@@ -33,11 +61,8 @@ button {
   border-radius: 8px;
   transition: 0.3s;
 
-  /* offset-x | offset-y | blur-radius | spread-radius | color */
-
   &:hover {
     transform: scale(1.02);
     background-color: darken($color-primary, 10%);
-    // box-shadow: 0px 0px 15px 1px $color-primary;
   }
 }

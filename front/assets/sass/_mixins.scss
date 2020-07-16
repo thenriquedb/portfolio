@@ -49,3 +49,16 @@
   background-position: center;
   background-size: contain;
 }
+
+@mixin form-message {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 3px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: center;
+}
