@@ -19,4 +19,6 @@ Site para publicar meus trabalhos e projetos pessoais.
 
 ### Resultado final
 
+Deploy
+http://bit.ly/thiagodomingues
 ![](./images/04.jpg)
